@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: s3
+  skip-cleanup: true
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: $AWS_DEFAULT_REGION
+  bucket: varrotest.com
+  local_dir: public
+  keep-history: true
+  on:
+    branch: master
+script:
+  - "npm run build"
+notifications:
+  slack: excelsite:sdcWe4e42OMQJbtfmMmfUgrq

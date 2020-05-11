@@ -1,0 +1,45 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.MoneyTypeFilter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.MoneyTypeFilter .description {
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.MoneyTypeFilter .buttonsWrapper {
+    background-color: #929292;
+    width: 100%;
+    max-width: 240px;
+    padding: 5px 5px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.MoneyTypeFilter .btn {
+    color: #171717;
+    font-size: 12px;
+    padding: 2px 10px;
+    background-color: #929292;
+    border: none;
+}
+
+.MoneyTypeFilter .btn.active {
+    background-color: #6f6f6f;
+}
+
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .MoneyTypeFilter .description {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .MoneyTypeFilter .buttonsWrapper {
+        margin: inherit;
+    }
+}

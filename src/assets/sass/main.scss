@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap');
+@import url("font-awesome.min.css");
+
+@import 'libs/vars';
+@import 'libs/mixins';
+
+ //:root::after {
+ //  @include info(10px);
+ //
+ //  @include breakpoint('>=extrawide') {
+ //    content: 'extrawide';
+ //    color: #000000;
+ //    background-color: #2fa1ff;
+ //  }
+ //
+ //  @include breakpoint('wide') {
+ //    content: 'wide';
+ //    color: #000000;
+ //    background-color: red;
+ //  }
+ //
+ //  @include breakpoint('normal') {
+ //    content: 'normal';
+ //    color: #000000;
+ //    background-color: orange;
+ //  }
+ //
+ //  @include breakpoint('narrow') {
+ //    content: 'narrow';
+ //    background-color: green;
+ //  }
+ //
+ //  @include breakpoint('narrower') {
+ //    content: 'narrower';
+ //    color: #ffffff;
+ //    background-color: blue;
+ //  }
+ //
+ //  @include breakpoint('<=mobile') {
+ //    content: '<=mobile';
+ //    background-color: purple;
+ //  }
+ //}
+ //
+ //:root::before {
+ //  @include info(90px);
+ //
+ //  @include max-resolution(192dpi) {
+ //    content: 'm-r-192dpi'
+ //  }
+ //
+ //  @include max-resolution(168dpi) {
+ //    content: 'm-r-168dpi'
+ //  }
+ //
+ //  @include max-resolution(144dpi) {
+ //    content: 'm-r-144dpi'
+ //  }
+ //
+ //  @include max-resolution(120dpi) {
+ //    content: 'm-r-120dpi'
+ //  }
+ //
+ //  @include max-resolution(96dpi) {
+ //    content: 'm-r-96dpi'
+ //  }
+ //}
+
+:root {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+
+  background-color: $atom-brand-1;
+  color: $atom-brand-7;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+a {
+  color: $atom-green;
+
+  &:hover {
+    color: $atom-light-blue;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+section {
+  box-sizing: border-box;
+  margin: 1rem 0;
+  padding: 1.2rem;
+
+  background-color: $atom-brand-3;
+}
+
+table {
+  width: 100%;
+  line-height: 1.4rem;
+
+  th, td:first-child {
+    padding: 0 0.2rem;
+
+    border: 1px solid $atom-brand-7;
+
+    color: $atom-green;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  th {
+    white-space: normal;
+  }
+
+  td {
+    padding: 0 0.2rem;
+    border: 1px solid $atom-brand-7;
+
+    color: $atom-contrast;
+    vertical-align: middle;
+  }
+
+  td:first-child {
+    text-align: left;
+  }
+}
+
+.single-page {
+  margin: 0 auto;
+  width: 60%;
+
+  min-height: 100%;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.company {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    margin: 0;
+  }
+
+  > section {
+    flex: 1 0 100%;
+    margin: 0 0 1em 0;
+  }
+
+  > * {
+    flex: 1 0 100%;
+  }
+}
+
+.company__col-1 {
+  flex: .25 1;
+  margin: 0 1rem 1rem 0;
+
+  min-height: 100%;
+
+  overflow: hidden;
+}
+
+.news-overflow {
+  width: 100%;
+  padding-right: 17px;
+  max-height: 41rem; // todo fix
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.company__col-2 {
+  box-sizing: border-box;
+  flex: .75 1;
+  margin: 0 0 1rem 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  strong {
+    font-weight: normal;
+    color: $atom-green;
+  }
+
+  .company__row-1 {
+    display: flex;
+    margin-bottom: 1rem;
+
+    section:first-child {
+      flex: .3 1;
+      margin: 0 1rem 0 0;
+    }
+
+    section:last-child {
+      flex: .7 1;
+    }
+  }
+
+  .company__row-2 {
+    position: relative;
+    background-color: $atom-brand-3;
+    padding: 1rem;
+  }
+
+  .company__button-maximize {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 4rem;
+    height: 4rem;
+
+    background: $atom-brand-1 url("../img/maximize.png") 50% 50% no-repeat;
+    background-size: 50%;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+
+  .company__button-maximize:hover {
+    display: block;
+  }
+
+  .excel-stub:hover + .company__button-maximize,
+  iframe:hover + .company__button-maximize {
+    display: block;
+  }
+}
+
+.excel-stub {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.excel-download-container {
+  display: flex;
+
+}
+
+.excel-logo {
+  width: 2rem;
+  height: 2rem;
+
+  padding-right: 1rem;
+}
+
+.excel-download {
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid $atom-brand-5;
+  border-radius: 4px;
+  color: $atom-brand-7;
+  cursor: pointer;
+}
+
+.excel-iframe {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  //&--maximize {
+  //  & + .company__button-maximize {
+  //    position: fixed;
+  //    background: $atom-brand-1 url("../img/minimize.png") 50% 50% no-repeat;
+  //    background-size: 50%;
+  //
+  //    z-index: 10;
+  //  }
+  //}
+}
+
+.iframe__button-maximize {
+  position: fixed;
+
+  right: 3rem;
+  top: 3rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  background: $atom-brand-1 url("../img/minimize.png") 50% 50% no-repeat;
+  background-size: 50%;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  z-index: 110;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+
+  a {
+    color: $atom-brand-7;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $atom-brand-6;
+    }
+  }
+
+  .active-link {
+    color: $atom-green;
+  }
+}
+
+.header > .main-nav {
+  margin-right: 4rem;
+
+  .main-nav__item-list {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-nav__item {
+    position: relative;
+    margin: 0 2rem;
+    font-size: 1.4rem;
+
+    & .main-nav__item {
+      box-sizing: border-box;
+      width: 100%;
+
+      margin: 0;
+
+      border-top: 1px solid $atom-brand-4;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    .main-nav__submenu > .main-nav__item-list {
+      display: none;
+      padding: 0;
+      background-color: $atom-brand-1;
+    }
+
+    &:hover .main-nav__item-list {
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+
+      left: -1rem;
+
+      height: auto;
+
+      padding-top: 1rem;
+
+      & a {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.news {
+  position: relative;
+  margin: 1rem -17px 1rem 0;
+  padding: .1rem 1rem;
+
+  color: $atom-contrast;
+  background-color: $atom-brand-3;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 0.8rem;
+  }
+
+  &__type {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__type-description {
+    display: none;
+  }
+
+  &__type:hover &__type-description {
+    position: absolute;
+    right: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 .4rem;
+    height: 2.5rem;
+
+    border-radius: 4px;
+
+    background-color: $atom-brand-1;
+
+    white-space: nowrap;
+    color: $atom-brand-7;
+  }
+
+  &__content {
+    height: 15rem;
+    max-height: 15rem;
+
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+  }
+
+  &__header-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__author {
+    &::after {
+      content: '|';
+      padding: 0 .5rem;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+  }
+
+  &__options {
+    position: absolute;
+    bottom: 1.5rem;
+
+    display: flex;
+
+    & a {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  &__adobe {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 1.2rem;
+    padding: .3rem;
+    margin-right: 1.4rem;
+
+    border-radius: .5rem;
+
+    background-color: $atom-brand-5;
+    color: $atom-green;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $atom-green;
+      color: $atom-brand-1;
+    }
+  }
+
+  &__pdf {
+    height: 27px;
+  }
+
+  &__content {
+    position: relative;
+    box-sizing: border-box;
+
+    color: $atom-brand-7;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -1rem;
+      display: block;
+
+      height: 6rem;
+      width: calc(100% + 2rem);
+
+      background: linear-gradient(to top,
+        rgba(57,57,69,1) 0%,
+        rgba(57,57,69,1) 40%,
+        rgba(57,57,69,0.9) 60%,
+        rgba(57,57,69,0.7) 80%,
+        rgba(57,57,69,0) 100%)
+    }
+  }
+
+  &:hover &__title {
+    color: $atom-green;
+  }
+}
+
+.gatsby-modal {
+  padding: 4rem 0 3rem;
+
+  &__close-button img {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 2rem;
+    height: 2rem;
+
+    padding: 1rem 2rem;
+  }
+}
+
+.ReactModal__Content {
+  background: $atom-brand-3;
+}
+
+.ReactModal__Overlay {
+  background: rgba($atom-brand-1, .7);
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.news--maximize {
+  box-sizing: border-box;
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  margin: 0;
+
+  background-color: rgba($atom-brand-1, .95);
+
+  z-index: 1;
+
+
+  .news__wrapper {
+    position: absolute;
+    left: 6rem;
+    right: 6rem;
+    top: 6rem;
+    bottom: 6rem;
+
+    padding: 4rem;
+
+    background: $atom-brand-4;
+    border-radius: 6px;
+  }
+
+  .news__content {
+    max-height: none;
+    height: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .news__read-more {
+    display: none;
+  }
+
+  .news__close {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+
+    top: 1.2rem;
+    right: 1.2rem;
+
+    cursor: pointer;
+  }
+}
+
+.whitepaper {
+  margin: 1rem 0;
+}
+
+#main {
+  box-sizing: border-box;
+
+  flex: 1 0;
+
+  min-height: calc(100vh - 7.4rem);
+  padding: 3rem 2rem 2rem;
+
+  background-color: $atom-brand-2;
+}
+
+#footer {
+  display: flex;
+
+  flex: 1 0 100%;
+  align-items: center;
+  justify-content: center;
+
+  height: 3rem;
+
+  background-color: $atom-brand-4;
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  li {
+    margin: 0.6rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#headerToggle {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  height: 2.25em;
+  width: 3.25em;
+  cursor: pointer;
+  transform: translateX(31rem);
+  transition: transform 0.5s;
+
+  .toggle {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: 0;
+    z-index: 100;
+
+    &:before {
+      font-family: FontAwesome;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\f0c9';
+      color: #fff;
+      font-size: 18px;
+      line-height: 2.25em;
+      background: $atom-brand-1;
+      border-radius: 0.35em;
+      text-align: center;
+      position: absolute;
+      left: 0.5em;
+      top: 0.5em;
+      display: block;
+      width: 3.25em;
+      height: 2.25em;
+      line-height: 2.25em;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+
+@import "breakpoints/responsive";

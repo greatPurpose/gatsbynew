@@ -1,0 +1,32 @@
+@import '../libs/vars';
+
+.contentBlock {
+  padding: 2rem;
+
+  background-color: $atom-brand-4;
+
+  border-radius: .5rem;
+}
+
+.contentBlock-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 3rem;
+
+  &--sb{
+    justify-content: space-between;
+  }
+}
+
+.contentBlock-title {
+  font-size: 3.6rem;
+  font-weight: 300;
+}
+
+.test2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+

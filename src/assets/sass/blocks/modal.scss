@@ -1,0 +1,136 @@
+@import '../libs/vars';
+
+.modal {
+  position: fixed;
+  box-sizing: border-box;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  //width: 100vw;
+  //min-height: 100vh;
+
+  //height: 100%;
+
+  padding: 6rem;
+
+  background-color: rgba($atom-brand-1, .7);
+
+  z-index: 200;
+}
+
+.modal-container {
+  position: absolute;
+
+  top: 8rem;
+  left: calc(50% - 93.1rem / 2);
+
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-areas:
+          "m-header m-header m-header"
+          "m-type m-caption ."
+          "m-button m-main .";
+
+  grid-template-rows: 9.6rem auto 1fr;
+  grid-template-columns: 18.9rem 2fr minmax(15rem,.7fr);
+  grid-gap: 2.5rem;
+
+  max-width: $content-max-width;
+  width: 93.1rem;
+  min-width: 400px;
+
+  padding: 0 0 5rem 0;
+
+  background-color: $atom-brand-4;
+
+  border-radius: .5rem;
+
+  z-index: 210;
+
+  p {
+    color: rgba(#ffffff, .8);
+  }
+
+  .main-logo {
+    height: 2.4rem;
+  }
+}
+
+
+
+.modal-caption {
+  grid-area: m-caption;
+  padding-top: 2rem;
+}
+
+.modal-type {
+  grid-area: m-type;
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  padding-top: 3rem;
+}
+
+.modal-header {
+  grid-area: m-header;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 3rem;
+
+  img {
+    height: 3.5rem;
+  }
+  //height: 6rem;
+}
+
+.modal-title {
+  grid-area: m-title;
+
+  font-size: 3.6rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.modal-date {
+  font-size: 1.2rem;
+}
+
+.modal-link {
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 50%;
+
+  background: $atom-gray-4 url("../img/close.svg") no-repeat 50% 50%;
+  background-size: 40%;
+}
+
+.modal-button {
+  grid-area: m-button;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 2rem;
+
+}
+
+.modal-content {
+  grid-area: m-main;
+
+  p {
+    margin: 0;
+  }
+}

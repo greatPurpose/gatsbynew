@@ -1,0 +1,24 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.FundsRaisingCharts {
+
+}
+
+.FundsRaisingCharts .header-description {
+    text-align: left;
+    color: white;
+}
+
+.FundsRaisingCharts > .row {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.FundsRaisingCharts .clearButtonCol {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.FundsRaisingCharts .SearchBookRow {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}

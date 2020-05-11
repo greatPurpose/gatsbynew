@@ -1,0 +1,143 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.FundrasingPieChart .arc {
+    cursor: pointer;
+}
+
+.FundrasingPieChart .axisCircle circle {
+    stroke: white;
+    stroke-dasharray: 6,2;
+    fill: none;
+    stroke-width: 1;
+    stroke-opacity: 0.5;
+}
+
+.FundrasingPieChart .axisCircle text {
+    fill: white;
+    font-size: 10px;
+}
+
+.FundrasingPieChart .centerText text {
+    text-anchor: middle;
+    fill: white;
+    font-size: 10px;
+}
+
+.FundrasingPieChart .centerText .companiesCount {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.FundrasingPieChart .centerText .count {
+    font-weight: 200;
+}
+
+.FundrasingPieChart .landscapeSuggestion {
+    margin-bottom: -30px
+}
+
+.FundrasingPieChart .landscapeSuggestion img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.FundrasingPieChart .landscapeSuggestion p {
+    color: white;
+    position: relative;
+    top: -120px;
+    text-align: center;
+}
+
+.FundrasingPieChart .landscapeSuggestion p a {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+.FundrasingPieChart .mobileTable table.table thead > tr > th {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.FundrasingPieChart .mobileTable tbody > tr > td {
+    font-size: 10px;
+}
+
+.FundrasingPieChart .mobileTable tbody > tr > td.fundsRaised {
+    text-align: right;
+}
+
+.FundrasingPieChart .mobileTable tbody > tr > td.name {
+    text-align: center;
+    width: 130px;
+}
+
+.FundrasingPieChart .mobileTable tbody > tr > td.valuation {
+    text-align: left;
+}
+
+.FundrasingPieChart td .barVal {
+    width: 100%;
+    position: relative;
+    height: 16px;
+}
+
+.FundrasingPieChart td .barVal .bar {
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #006EA8;
+    box-sizing: border-box;
+}
+
+.FundrasingPieChart td .barVal .val {
+    position: relative;
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+
+.FundrasingPieChart td:first-child .barVal {
+    text-align: right
+}
+
+.FundrasingPieChart td:first-child .barVal .bar {
+    left: auto;
+    right: 0;
+}
+
+.FundrasingPieChart td:first-child .barVal .val {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+/*@screen-sm-min*/
+@media (min-width: 768px) {
+    .FundrasingPieChart .centerText text {
+        text-anchor: middle;
+        fill: white;
+        font-size: 15px;
+    }
+
+    .FundrasingPieChart .centerText .companiesCount {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+}
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .FundrasingPieChart .centerText text {
+        text-anchor: middle;
+        fill: white;
+        font-size: 18px;
+    }
+
+    .FundrasingPieChart .centerText .companiesCount {
+        font-size: 30px;
+        padding-top: 5px;
+    }
+}

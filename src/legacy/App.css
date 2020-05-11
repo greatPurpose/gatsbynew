@@ -1,0 +1,33 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.App {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.TopNavBar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0
+}
+
+.ReactModal__Body--open #root {
+  filter: blur(2px)
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding-top: 0;
+  }
+
+  .TopNavBar {
+    position: inherit;
+  }
+}
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+  /*.ClearButton {*/
+    /*margin-top: -200px;*/
+  /*}*/
+}

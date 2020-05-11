@@ -1,0 +1,86 @@
+@import '../libs/vars';
+
+.news {
+  position: relative;
+
+  grid-row-start: 2;
+  grid-row-end: 5;
+
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  height: auto;
+
+  background-color: $atom-brand-4;
+
+  border-radius: .5rem;
+  font-size: 1rem;
+
+  overflow: hidden;
+}
+
+.news-content {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 6rem;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+
+  margin-right: -2.1rem;
+  padding: 0 4.4rem;
+
+  font-size: 1.2rem;
+
+  overflow-y: scroll;
+}
+
+.news-header {
+  padding: 2.2rem 4.4rem;
+  margin: 0;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.news-item {
+  display: grid;
+
+  grid-template-rows: auto 1fr;
+  grid-template-columns: min(3rem) 1fr;
+  grid-auto-flow: dense;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: .5rem;
+
+  padding: 1.2rem 0;
+
+  border-bottom: 2px solid $atom-brand-1;
+
+  font-weight: 300;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-item-type {
+  grid-area: 2 / 1 / 3 / 2;
+
+  margin: 0;
+}
+
+.news-item-date {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.news-item-content {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+
+@include min-resolution(168dpi) {
+  .news-item {
+    border-bottom: 1px solid $atom-brand-1;
+  }
+}

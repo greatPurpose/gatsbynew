@@ -1,0 +1,108 @@
+@import '../libs/vars';
+
+.company-header {
+  grid-area: 1 / 1 / 2 / 6;
+
+  padding: 0 2rem;
+
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.company-table {
+  font-size: 1.4rem;
+
+  table {
+    min-width: 90%;
+  }
+
+  h2 {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: $atom-green;
+  }
+}
+
+.iframe {
+  position: relative;
+
+  width: 100%;
+}
+
+.iframe-stub {
+  width: 100%;
+
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.iframe-action {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  height: 4rem;
+  width: 4rem;
+
+  border-radius: 50%;
+
+  background: $atom-brand-1 url("../img/maximize.png") no-repeat 50% 50%;
+  background-size: 40%;
+
+  cursor: pointer;
+
+  &:hover {
+    background-size: 44%;
+  }
+}
+
+.fixed {
+  position: fixed;
+
+  top: 4rem;
+  right: 4rem;
+
+  background: $atom-brand-1 url("../img/minimize.png") no-repeat 50% 50%;
+  background-size: 40%;
+
+  z-index: 110;
+}
+
+.iframe-modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  z-index: 100;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iframe-loader {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba($atom-brand-1, .8);
+
+  z-index: -1;
+}
+
+.grid-table {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}

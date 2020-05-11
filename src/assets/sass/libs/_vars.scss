@@ -1,0 +1,44 @@
+@import "breakpoints";
+
+$atom-red: #ff4495;
+$atom-green: #52e3c2;
+$atom-blue: #0781ff;
+$atom-purple: #d211fe;
+$atom-bright-orange: #ff4b12;
+$atom-orange: #ed8a19;
+$atom-light-blue: #40c4ff;
+$atom-gray-1: #546e7a;
+$atom-gray-2: #677174;
+$atom-gray-3: #a9a9ad;
+$atom-gray-4: #606169;
+$atom-brand-1: #282833;
+$atom-brand-2: #32323e;
+$atom-brand-3: #393945;
+$atom-brand-4: #40424f;
+$atom-brand-5: #4d505f;
+$atom-brand-6: #6e7288;
+$atom-brand-7: #b4b8cd;
+$atom-contrast: #fff;
+
+$post-type-1: #00A14B;
+$post-type-2: #8BC53F;
+$post-type-3: #ED8A19;
+$post-type-4: #EC1C24;
+
+$content-width: 96%;
+$content-max-width: 144rem;
+
+@include breakpoints((
+	extralarge: (1200px, 4000px),
+	large: (992px, 1200px),
+	medium: (768px, 992px),
+	small: (576px, 798px),
+	mobile: (null, 576px),
+	fund1100: (950px, 1100px),
+	fund950: (750px, 950px),
+	fund850: (650px, 850px),
+	fund750: (550px, 750px),
+	fund650: (450px, 650px),
+	fund500: (360px, 500px),
+	patent1350: (1200px, 1350px)
+));

@@ -1,0 +1,38 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.SunburstFilters {
+    background-color: #191919;
+    padding-top: 10px;
+}
+
+.SunburstFilters .filterName {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.SunburstFilters .jurisdictionRow {
+    margin-top: 10px;
+}
+
+.SunburstFilters .jurisdictionRow table,
+.SunburstFilters .docTypesRow table {
+    margin: auto;
+}
+
+.SunburstFilters .checkboxCol {
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+.SunburstFilters .col-md-2 .col-xs-6 {
+    text-align: center;
+}
+
+.SunburstFilters .docTypesRow {
+    margin-top: 10px;
+}
+
+.SunburstFilters .docTypesRow .docType {
+    float: left;
+    max-width: 40px;
+    padding-left: 5px;
+}

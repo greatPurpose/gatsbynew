@@ -1,0 +1,42 @@
+@import '../libs/vars';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0 .5rem;
+
+  border: 1px solid $atom-gray-3;
+  border-radius: .4rem;
+
+  height: 3rem;
+
+  font-size: 1rem;
+  color: $atom-contrast;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: background-color .3s;
+
+}
+
+.button:hover {
+  background-color: rgba($atom-green, .15);
+}
+
+.button-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.button-icon + .button-title {
+  padding-left: .5rem;
+}
+
+.button-title {
+  color: $atom-contrast;
+}

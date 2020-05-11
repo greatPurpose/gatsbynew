@@ -1,0 +1,42 @@
+@import '../libs/vars';
+
+#footer-container {
+  grid-area: footer;
+
+  background-color: $atom-brand-4;
+}
+
+#footer-content {
+  grid-area: f-content;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: $content-max-width;
+  width: $content-width;
+  margin: 0 auto;
+
+  a {
+    padding: 1rem 1rem;
+
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $atom-contrast;
+
+    &:hover {
+      color: $atom-light-blue;
+    }
+  }
+}
+
+#app-container--company #footer-content {
+
+}
+
+.footer-rights {
+  padding-right: 1rem;
+
+  font-size: 1.4rem;
+}

@@ -1,0 +1,45 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.LandingPage {
+
+}
+
+.LandingPage .headerSection {
+    background-image: url('../assets/landing-page-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+    min-height: 500px;
+}
+
+.LandingPage .headerSection h1 {
+    color: white;
+    padding: 5px 20px;
+}
+
+.LandingPage .headerSection form {
+    text-align: left;
+    margin: 50px auto;
+    max-width: 300px;
+}
+
+.LandingPage .headerSection .col-md-4 {
+    text-align: center;
+}
+
+.LandingPage .headerSection form .btn {
+    float: right;
+    width: 100%;
+}
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .LandingPage .headerSection h1 {
+        margin-top: 150px;
+    }
+
+    .LandingPage .headerSection h1.hasLogin {
+        margin-top: 80px;
+    }
+}

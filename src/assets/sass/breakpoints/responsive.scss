@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap');
+
+@import '../libs/breakpoints';
+@import '../libs/mixins';
+@import '../libs/vars';
+
+@include breakpoint('<=narrower') {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-30rem);
+    min-height: 100vh;
+    z-index: 1;
+
+    &.header-visible {
+      transform: none;
+      position: fixed;
+
+      #headerToggle {
+        transform: translateX(17rem);
+      }
+    }
+  }
+
+  #headerToggle {
+    display: block;
+  }
+}
+
+@include breakpoint('<=mobile') {
+  white-space: normal;
+
+  th {
+    white-space: normal;
+  }
+}
+
+@include max-resolution(96dpi) {
+  :root {
+    font-size: 16px;
+  }
+
+  @include breakpoint('extrawide') {
+    :root {
+      font-size: 22px;
+    }
+  }
+
+  @include breakpoint('<=normal') {
+    .single-page {
+      width: 80%;
+    }
+
+    .company__col-1 {
+      flex: 1 0 100%;
+    }
+
+    .company__col-2 {
+      flex: 1 0 100%;
+    }
+  }
+
+  @include breakpoint('<=narrow') {
+    :root {
+      font-size: 15px;
+    }
+
+    .company__col-2 {
+      .company__row-1 {
+        flex-wrap: wrap;
+        section:first-child {
+          flex: 1 0 100%;
+          margin-bottom: 1rem;
+        }
+
+        section:last-child {
+          flex: 1 0 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint('<=narrower') {
+    .single-page {
+      width: 90%;
+    }
+  }
+
+  @include breakpoint('<=mobile') {
+    .single-page {
+      width: 95%;
+    }
+  }
+}
+
+@include max-resolution(168dpi) {
+  @include breakpoint('<=narrower') {
+    .company__col-1 {
+      flex: 1 0 100%;
+    }
+
+    .company__col-2 {
+      flex: 1 0 100%;
+    }
+  }
+
+  @include breakpoint('<=narrower') {
+    :root {
+      font-size: 15px;
+    }
+
+    .company__col-2 {
+      .company__row-1 {
+        flex-wrap: wrap;
+        section:first-child {
+          flex: 1 0 100%;
+          margin-bottom: 1rem;
+        }
+
+        section:last-child {
+          flex: 1 0 100%;
+        }
+      }
+    }
+  }
+}
+
+@include min-resolution(168dpi) {
+  .single-page {
+    width: 90%;
+  }
+
+  .news {
+    &__header {
+      margin-right: 1rem;
+    }
+  }
+
+  .news-overflow {
+    max-height: 64rem; // todo fix
+  }
+
+  .whitepaper {
+    .news__header {
+      margin-right: 0;
+    }
+  }
+}

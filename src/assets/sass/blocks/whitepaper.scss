@@ -1,0 +1,46 @@
+@import '../libs/vars';
+
+.whitepaper {
+  padding: 2rem 2rem;
+}
+
+
+.whitepaper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whitepaper-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whitepaper-fairly {
+  padding: .3rem .5rem;
+
+  border: 1px solid $atom-brand-7;
+  border-radius: 4px;
+
+  background-color: $atom-brand-5;
+
+  margin-right: 1rem;
+
+  font-size: 2rem;
+  font-weight: 200;
+
+  white-space: nowrap;
+}
+
+.whitepaper-title {
+  margin-right: 3rem;
+
+  font-size: 3.6rem;
+  font-weight: 300;
+}
+
+.whitepaper-content {
+  margin-top: 1rem;
+  color: $atom-gray-3;
+}

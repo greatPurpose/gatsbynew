@@ -1,0 +1,4 @@
+---
+path: "/companies/"
+title: "Companies"
+---

@@ -1,0 +1,164 @@
+@import '../libs/vars';
+
+.PatentsExplorer  {
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  grid-template-areas:
+      "head head"
+      "chart .";
+
+  @include breakpoint('<=patent1350') {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "head"
+      "chart";
+  }
+
+  .circle-chart {
+    grid-area: chart;
+
+
+    svg {
+      min-width: 100%;
+
+      @include breakpoint('<=patent1350') {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.PatentsExplorer .SunburstFilters {
+  grid-area: head;
+  display: grid;
+
+  grid-template-areas:
+    "date jur doc";
+
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 2rem;
+
+  max-width: 100%;
+  padding: 0;
+
+  background: inherit;
+
+  @include breakpoint('<=patent1350') {
+    grid-template-areas:
+      "date date"
+      "jur jur"
+      "doc doc";
+
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .DateFilter {
+    grid-area: date;
+  }
+
+  .Jurisdictions-wrapper {
+    grid-area: jur;
+
+    @include breakpoint('<=patent1350') {
+      margin: 3rem 0;
+    }
+  }
+
+  .Document-type-wrapper {
+    grid-area: doc;
+
+    @include breakpoint('<=patent1350') {
+      margin: 3rem 0;
+    }
+  }
+
+  .filterName {
+    text-align: center;
+  }
+
+  .jurisdictionRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .wrapper {
+      display: grid;
+
+      grid-template-areas:
+          "checkbox flag"
+          ". country";
+
+      grid-template-rows: auto auto;
+      grid-template-columns: 3rem auto;
+
+      padding: 0 1rem;
+
+      @include breakpoint('<=patent1350') {
+        justify-content: flex-start;
+
+        max-width: none;
+
+        &:last-child {
+          justify-content: flex-end;
+        }
+      }
+
+      input {
+        grid-area: checkbox;
+      }
+
+      img {
+        grid-area: flag;
+      }
+
+      p {
+        grid-area: country;
+
+        margin: 0 auto;
+        color: $atom-contrast;
+      }
+    }
+  }
+
+  .docTypesRow {
+    display: grid;
+
+    grid-template-areas:
+      "checkbox patent";
+
+    .wrapper {
+      display: grid;
+
+      grid-template-areas:
+              "checkbox flag"
+              ". country";
+
+      grid-template-rows: auto auto;
+      grid-template-columns: 3rem auto;
+
+      padding: 0 1rem;
+
+      max-width: 10rem;
+
+      @include breakpoint('<=patent1350') {
+        justify-content: flex-start;
+
+        max-width: none;
+
+        &:last-child {
+          justify-content: flex-end;
+        }
+      }
+
+      p {
+        margin: 0;
+
+        line-height: 1.8rem;
+        color: $atom-contrast;
+      }
+    }
+  }
+}

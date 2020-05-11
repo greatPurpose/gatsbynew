@@ -1,0 +1,99 @@
+@import '../libs/vars';
+
+.key-number-header {
+  margin-bottom: 1.4rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $atom-green;
+}
+
+.key-number-header-value {
+  font-size: 3.6rem;
+}
+
+.key-number-definition-list {
+  white-space: nowrap;
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+}
+
+.key-number-term {
+  display: inline-block;
+  color: $atom-green;
+}
+
+.key-number-other {
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: dense;
+  grid-gap: 1rem;
+
+  width: 100%;
+
+  .key-number {
+    border-left: 2px solid $atom-brand-1;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin: 0;
+  }
+
+  div:first-child dl {
+    border-left: none;
+  }
+
+  dt {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+}
+
+.key-number-definition {
+  display: inline-block;
+  margin: 0;
+  padding-left: .3rem;
+
+  + br {
+    font-size: 1.6rem;
+  }
+}
+
+.key-number-pseudo-title {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $atom-green;
+
+  + .key-number {
+
+    border: none;
+
+    .key-number-term  {
+      display: inline;
+      font-size: 1.2rem;
+    }
+
+    .key-number-definition-list {
+      display: block;
+      border: none;
+    }
+
+    dt {
+      display: inline;
+    }
+  }
+}
+
+
+.key-number-wrapper {
+  border-left: 2px solid $atom-brand-1;
+}

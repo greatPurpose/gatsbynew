@@ -1,0 +1,58 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.DateFilter {
+    text-align: center;
+}
+
+.DateFilter text, .DateFilter line {
+    fill: white;
+    font-size: 9px;
+}
+
+.DateFilter .ticks {
+    stroke: white;
+}
+
+.DateFilter .playButtonWrapper {
+    padding-right: 10px;
+    width: 100px;
+    padding-top: 15px;
+}
+
+.DateFilter .playButton {
+    cursor: pointer;
+}
+
+.DateFilter .playButton .icon {
+    /*font-size: 20px;*/
+    padding-left: 8px;
+}
+
+.DateFilter svg:not(:root) {
+    overflow: visible;
+}
+
+.DateFilter .rangeslider-horizontal .rangeslider__fill {
+    background-color: transparent;
+}
+
+.DateFilter .rangeslider {
+    margin-top: 15px;
+}
+
+.DateFilter .rangeslider .rangeslider__handle {
+    width: 20px;
+    height: 20px;
+    /*top: -5px;*/
+}
+
+.DateFilter .rangeslider .rangeslider__handle::after {
+    display: none;
+}
+
+.DateFilter table {
+    margin: auto;
+}
+
+.DateFilter table td {
+    vertical-align: top;
+}

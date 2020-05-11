@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #171717;
+  font-family: sans-serif;
+}
+
+.btn:focus, .btn.active {
+  outline: none !important;
+  /*box-shadow: none !important;*/
+}

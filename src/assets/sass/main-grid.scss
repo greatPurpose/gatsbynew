@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:200,300,400,500,600,700&display=swap');
+@import url("font-awesome.min.css");
+
+@import 'libs/vars';
+@import 'libs/mixins';
+
+@import 'blocks/base';
+
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/footer';
+
+@import 'blocks/contentBlock';
+@import 'blocks/keyNumber';
+@import 'blocks/company';
+@import 'blocks/button';
+@import 'blocks/modal';
+@import 'blocks/postType';
+@import 'blocks/whitepaper';
+@import 'blocks/news';
+@import 'blocks/charts';
+
+@import 'legacy/fundraising';
+@import 'legacy/patents';
+@import 'legacy/common';

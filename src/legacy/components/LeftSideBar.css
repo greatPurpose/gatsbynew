@@ -1,0 +1,34 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.LeftSideBar {
+    position: fixed;
+    /*left: 0;*/
+    top: 0;
+    background-color: #2a2a2a;
+    height: 100%;
+    z-index: 3;
+    overflow: scroll;
+    transition: all 0.5s ease;
+}
+
+.LeftSideBar .IndustryFilters {
+    padding: 5px;
+}
+
+.LeftSideBar .IndustryFilters .filterItem {
+    padding: 0 10px;
+    margin-top: 0;
+    border: none;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.LeftSideBar .IndustryFilters .filterItem.active {
+    background-color: #808080;
+}
+
+.LeftSideBar .IndustryFilters .filterItem img {
+    height: 20px;
+}
+
+.LeftSideBar .IndustryFilters .filterItem table td {
+    height: 50px;
+}

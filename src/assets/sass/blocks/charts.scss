@@ -1,0 +1,71 @@
+@import '../libs/vars';
+
+#app-container--charts {
+  #main-container {
+    margin: 0 auto;
+  }
+}
+
+.chart-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 6rem;
+}
+
+.chart {
+  position: relative;
+
+  transform-origin: 50% 0;
+
+  left: -150%;
+
+  height: 290rem;
+  width: 400%;
+}
+
+.chart-container {
+  position: relative;
+
+  height: 290rem;
+  min-width: 110rem;
+
+  overflow: hidden;
+}
+
+.chart-md {
+  margin: 0 auto;
+  max-width: 92.6rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 4rem;
+
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  a {
+    color: $atom-green;
+
+    &:hover {
+      color: $atom-light-blue;
+    }
+  }
+}
+
+
+@include min-resolution(168dpi) {
+  .chart {
+    transform: scale(.65);
+    height: 475rem;
+  }
+
+  .chart-container {
+    height: 308rem;
+  }
+}

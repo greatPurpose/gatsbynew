@@ -1,0 +1,68 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.IndustryFilters .description {
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: left;
+}
+
+.IndustryFilters .filterItem.clearButton {
+    border: none;
+    text-align: center;
+}
+.IndustryFilters .filterItem.clearButton:hover,
+.IndustryFilters .filterItem.clearButton.active{
+    background: none;
+}
+
+.IndustryFilters .filterItem {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+}
+
+.IndustryFilters .filterItem table {
+    /*width: 100%;*/
+}
+
+.IndustryFilters .filterItem table td {
+    height: 60px;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.IndustryFilters .filterItem table td img.icon {
+    margin-right: 10px;
+}
+
+.IndustryFilters .filterItem:hover,
+.IndustryFilters .filterItem.active{
+    background-color: #2a2a2a;
+}
+
+/*@screen-sm-min*/
+@media (min-width: 768px) {
+    .IndustryFilters .filterItem {
+        width: 33.33%;
+    }
+
+    .IndustryFilters .filterItem.clearButton {
+        width: 100%;
+    }
+}
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .IndustryFilters .filterItem {
+        width: 20%;
+    }
+
+    .IndustryFilters .filterItem.clearButton {
+        width: 20%;
+        padding-top: 20px;
+    }
+}

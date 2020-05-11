@@ -1,0 +1,81 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.TopNavBar .navbar {
+    z-index: 2;
+}
+
+.TopNavBar .navbar-brand svg {
+    height: 22px;
+}
+
+.TopNavBar .navbar-brand .logoRotate {
+    /*animation: App-logo-spin infinite 3s linear;*/
+}
+
+.TopNavBar .navbar-default {
+    border-radius: 0;
+    border: none;
+    background-color: #222;
+    margin: 0;
+}
+
+.TopNavBar .navbar-default .navbar-nav > li {
+    background-color: #222;
+}
+
+.TopNavBar .navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.TopNavBar .navbar-default .navbar-nav > li > a:hover {
+    color: #e9e9e9;
+}
+
+.TopNavBar .navbar-default .navbar-nav > li > a.active,
+.TopNavBar .navbar-default .navbar-nav > li > a.active:focus,
+.TopNavBar .navbar-default .navbar-nav > a:focus,
+.TopNavBar .navbar-default .navbar-nav > a:hover{
+    background-color: #292929;
+    color: white;
+}
+
+.TopNavBar .navbar-default .navbar-nav > li > a.active:hover {
+    background-color: #292929;
+    color: white;
+}
+
+.TopNavBar .filters {
+    float: left;
+    font-size: 24px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    padding: 0 8px;
+    cursor: pointer;
+    margin: 7px 0 0 15px;
+}
+
+/*@screen-sm-min*/
+@media (min-width: 768px) {
+    .TopNavBar .navbar-nav > li > a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .TopNavBar .navbar-brand svg {
+        margin-top: 15px;
+    }
+}
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .TopNavBar .navbar-brand svg {
+        height: 50px;
+        margin-top: 0;
+    }
+}
+
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+

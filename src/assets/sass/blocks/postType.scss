@@ -1,0 +1,75 @@
+@import '../libs/vars';
+
+$title-padding: .7rem;
+
+.post-type {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 75%;
+
+  &:hover:after {
+    content: 'Impact';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    bottom: calc(100% + 1.4rem + 5%);
+    width: 100%;
+  }
+
+  z-index: 0;
+}
+
+.post-type-cell {
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: $atom-brand-1;
+  border-radius: .5rem;
+
+  .post-type {
+    font-size: 1.4rem;
+  }
+
+  .post-type:hover &:first-child:after {
+    content: 'Positive';
+    position: absolute;
+
+    right: calc(100% + 20%);
+  }
+
+  .post-type:hover &:nth-child(3):after {
+    content: 'Negative';
+    position: absolute;
+
+    right: calc(100% + 20%);
+  }
+
+  .post-type:hover &:first-child:before {
+    content: 'Hi';
+    position: absolute;
+
+    bottom: calc(100% + .4rem)
+  }
+
+  .post-type:hover &:nth-child(2):before {
+    content: 'Lo';
+    position: absolute;
+
+    bottom: calc(100% + .4rem)
+  }
+}
+
+

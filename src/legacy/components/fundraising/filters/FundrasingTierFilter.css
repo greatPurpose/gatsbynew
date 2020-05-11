@@ -1,0 +1,55 @@
+/* © 2017 VARRO ANALYTICS. ALL RIGHTS RESERVED. */
+.FundsRaisingTierFilter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.FundsRaisingTierFilter .description {
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.FundsRaisingTierFilter .buttonsWrapper {
+    background-color: #929292;
+    width: 245px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.FundsRaisingTierFilter .btn {
+    color: #171717;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 75px;
+    background-color: #929292;
+    border: none;
+}
+
+.FundsRaisingTierFilter .btn.active {
+    background-color: #6f6f6f;
+}
+
+.FundsRaisingTierFilter .projectedValuationsCol {
+    padding-top: 10px;
+}
+
+
+/*@screen-md-min*/
+@media (min-width: 992px) {
+    .FundsRaisingTierFilter .description {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .FundsRaisingTierFilter .buttonsWrapper {
+        margin: inherit;
+        margin-left: 15px;
+    }
+
+    .FundsRaisingTierFilter .projectedValuationsCol {
+        text-align: left;
+        padding-left: 30px;
+    }
+}
